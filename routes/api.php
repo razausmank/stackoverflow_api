@@ -19,4 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/questions', [QuestionsController::class , 'getAllQuestions']);
+
+Route::get('/questions', [QuestionsController::class , 'index']);
+Route::post('/questions', [QuestionsController::class , 'store']);
+
